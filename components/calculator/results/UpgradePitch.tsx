@@ -4,6 +4,11 @@ import { motion } from "framer-motion";
 import { ArrowRight, Palette, FlaskConical, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+/**
+ * Render the UpgradePitch marketing hero section with animated headline, three benefit cards, call-to-action controls, and trust badges.
+ *
+ * @returns The hero section as a JSX element.
+ */
 export function UpgradePitch() {
     return (
         <div className="relative overflow-hidden rounded-3xl bg-slate-900 text-white shadow-2xl">

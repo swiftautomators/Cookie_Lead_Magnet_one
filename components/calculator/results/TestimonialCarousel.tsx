@@ -36,6 +36,13 @@ const testimonials: Testimonial[] = [
     }
 ];
 
+/**
+ * Renders a rotating testimonial carousel that displays a quote, author, role, impact badge, star rating, and progress indicators.
+ *
+ * The carousel automatically advances to the next testimonial every 5 seconds and animates transitions between items.
+ *
+ * @returns A JSX element containing the testimonial carousel UI.
+ */
 export function TestimonialCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
 

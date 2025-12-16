@@ -8,6 +8,14 @@ interface ComplexityBreakdownProps {
     hourlyRate: number; // Derived or passed
 }
 
+/**
+ * Render a visual breakdown explaining why a user's skill level and design complexity justify a premium hourly rate.
+ *
+ * @param skillLevel - The user's skill level (used for display and contextual wording, e.g., "novice", "expert")
+ * @param complexity - The design complexity label to display (e.g., "simple", "intricate")
+ * @param hourlyRate - Hourly rate in dollars used in the Effective Hourly Rate display
+ * @returns A JSX element showing time investment, required skills, and the effective hourly rate callout
+ */
 export function ComplexityBreakdown({ skillLevel, complexity, hourlyRate }: ComplexityBreakdownProps) {
     return (
         <div className="bg-gradient-to-br from-background to-secondary/10 rounded-2xl border shadow-sm p-6 h-full flex flex-col">
