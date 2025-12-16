@@ -69,9 +69,9 @@ import { AnalyticsWrapper } from "@/components/analytics/AnalyticsWrapper";
  * @param params.id - The calculation identifier used to load the stored results
  * @returns The rendered results page JSX; if no matching calculation exists, a not-found UI is returned
  */
-export default async function ResultsPage({ params }: { params: { id: string } }) {
-    // Awaiting params for Next.js 15+ compatibility if needed, though 14 works synchronously often
-    const { id } = await Promise.resolve(params);
+export default async function ResultsPage({ params }: { params: Promise<{ id: string }> }) {
+    // Awaiting params for Next.js 15+ compatibility
+    const { id } = await params;
     const data = await getResults(id);
 
     if (!data) {
