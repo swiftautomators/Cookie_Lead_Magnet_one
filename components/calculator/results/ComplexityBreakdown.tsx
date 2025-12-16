@@ -15,7 +15,7 @@ interface ComplexityBreakdownProps {
  * @param hourlyRate - Hourly rate in dollars used in the Effective Hourly Rate display
  * @returns A JSX element showing time investment, required skills, and the effective hourly rate callout
  */
-export function ComplexityBreakdown({ skillLevel, complexity, hourlyRate }: ComplexityBreakdownProps) {
+export function ComplexityBreakdown({ hourlyRate }: ComplexityBreakdownProps) {
     return (
         <div className="bg-gradient-to-br from-background to-secondary/10 rounded-2xl border shadow-sm p-6 flex flex-col justify-between">
             <h3 className="text-xl font-serif font-bold mb-6 flex items-center gap-2">
