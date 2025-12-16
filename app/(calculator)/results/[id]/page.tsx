@@ -63,6 +63,15 @@ async function getResults(id: string): Promise<CalculationResult | null> {
 
 import { AnalyticsWrapper } from "@/components/analytics/AnalyticsWrapper";
 
+/**
+ * Render the results page for a given calculation id.
+ *
+ * Fetches the calculation by `params.id` and returns the composed results UI including structured data,
+ * pricing cards, insights, and CTAs. If the calculation is not found, returns a simple "Result Not Found" UI.
+ *
+ * @param params.id - The calculation identifier used to load the stored results
+ * @returns The rendered results page JSX; if no matching calculation exists, a not-found UI is returned
+ */
 export default async function ResultsPage({ params }: { params: { id: string } }) {
     // Awaiting params for Next.js 15+ compatibility if needed, though 14 works synchronously often
     const { id } = await Promise.resolve(params);

@@ -4,6 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Share2, RefreshCw } from "lucide-react";
 import { useRouter } from "next/navigation";
 
+/**
+ * Renders a call-to-action UI with controls to start a new pricing calculation or share the tool.
+ *
+ * The "Calculate New Order" button navigates to `/analyze`. The "Share Tool" button invokes the Web Share API
+ * when available and falls back to copying the current page URL to the clipboard.
+ *
+ * @returns A JSX element containing the CTA UI with the two action buttons.
+ */
 export function CalculateAnotherCTA() {
     const router = useRouter();
 
