@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { UserInput, PricingAnalysis } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 export const generatePricingAnalysis = async (input: UserInput): Promise<PricingAnalysis> => {
   const modelId = "gemini-2.5-flash"; // Using Flash for speed/efficiency with tools
