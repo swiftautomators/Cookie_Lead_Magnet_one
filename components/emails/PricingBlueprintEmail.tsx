@@ -12,6 +12,7 @@ import {
     Button,
     Link,
     Hr,
+    Img,
 } from '@react-email/components';
 import * as React from 'react';
 
@@ -60,8 +61,16 @@ export default function PricingBlueprintEmail({
                 <Container style={container}>
                     {/* HEADER */}
                     <Section style={header}>
-                        <Heading style={logoText}>🍪 CookieCraft AI</Heading>
-                        <Text style={headerSub}>Your Pricing Blueprint</Text>
+                        <Section style={logoContainer}>
+                            <Img
+                                src="https://cookiecraftai.com/images/cookie-craft-logo-email.png" // Assumes deployed path, user might need to host this. For now using absolute path related to domain if possible or vercel deployment.
+                                width="180"
+                                height="auto"
+                                alt="CookieCraft AI"
+                                style={logo}
+                            />
+                        </Section>
+                        <Heading style={h1}>Your Pricing Blueprint</Heading>
                         <div style={badge}>For: {location}</div>
                     </Section>
 
@@ -69,7 +78,7 @@ export default function PricingBlueprintEmail({
                     <Section style={section}>
                         <Text style={text}>Hi {userName},</Text>
                         <Text style={text}>
-                            Your cottage food hustle deserves profitable pricing. We analyzed the <strong>{location}</strong> market against your skill level and here's what the data says:
+                            Your cottage food hustle deserves profitable pricing. We analyzed the <strong>{location}</strong> market against your skill level and here&apos;s what the data says:
                         </Text>
                     </Section>
 
@@ -123,7 +132,7 @@ export default function PricingBlueprintEmail({
                             <Column>
                                 <Text style={insightTitle}>🎨 Design Complexity ({complexity})</Text>
                                 <Text style={text}>
-                                    Detailed work per order means your time is valuable. Don't undersell your labor.
+                                    Detailed work per order means your time is valuable. Don&apos;t undersell your labor.
                                 </Text>
                             </Column>
                         </Row>
@@ -133,7 +142,7 @@ export default function PricingBlueprintEmail({
                     <Section style={warningBox}>
                         <Text style={warningTitle}>⚠️ THE HIDDEN COST KILLING YOUR MARGINS</Text>
                         <Text style={text}>
-                            Most cookieteers price at $7.50 and think "Great profit!" But if you spend 3-4 hours designing, your actual hourly wage drops drastically.
+                            Most cookieteers price at $7.50 and think &quot;Great profit!&quot; But if you spend 3-4 hours designing, your actual hourly wage drops drastically.
                         </Text>
                         <Text style={{ fontSize: '14px', color: '#b91c1c', marginBottom: '8px', fontWeight: 'bold' }}>
                             ⚠️ You&apos;re losing money on:
@@ -200,6 +209,26 @@ const container = {
     overflow: 'hidden',
 };
 
+const logoContainer = {
+    textAlign: 'center' as const,
+    marginBottom: '20px',
+};
+
+const logo = {
+    display: 'block',
+    margin: '0 auto',
+};
+
+const h1 = {
+    fontSize: '24px',
+    fontWeight: 'bold',
+    color: '#8B4513',
+    margin: '0',
+    textAlign: 'center' as const,
+    textTransform: 'uppercase' as const,
+    letterSpacing: '1px',
+};
+
 const header = {
     backgroundColor: '#F5DEB3', // Cookie-like color
     padding: '30px 20px',
@@ -207,20 +236,8 @@ const header = {
     backgroundImage: 'linear-gradient(135deg, #F5DEB3 0%, #FFF9F0 100%)',
 };
 
-const logoText = {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    color: '#8B4513',
-    margin: '0 0 10px',
-};
-
-const headerSub = {
-    fontSize: '16px',
-    color: '#8B4513',
-    margin: '0 0 15px',
-    textTransform: 'uppercase' as const,
-    letterSpacing: '1px',
-};
+// Removed unused logoText
+// Removed unused headerSub
 
 const badge = {
     display: 'inline-block',
@@ -250,6 +267,7 @@ const card = {
     padding: '24px',
     margin: '0 20px 30px',
     textAlign: 'center' as const,
+    borderLeft: '4px solid #E91E8C', // Branding touch
 };
 
 const cardTitle = {
@@ -280,6 +298,7 @@ const sweetSpotBox = {
     padding: '8px 16px',
     display: 'inline-block',
     margin: '16px 0',
+    border: '1px dashed #E91E8C',
 };
 
 const sweetSpotText = {

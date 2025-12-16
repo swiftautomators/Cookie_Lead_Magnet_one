@@ -1,21 +1,18 @@
-import { notFound } from "next/navigation";
+import { StickyMobileCTA } from "@/components/calculator/results/StickyMobileCTA";
+import dynamic from "next/dynamic";
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { ResultsHero } from "@/components/calculator/results/ResultsHero";
 import { PricingCards } from "@/components/calculator/results/PricingCards";
 import { MarketComparison } from "@/components/calculator/results/MarketComparison";
 import { ComplexityBreakdown } from "@/components/calculator/results/ComplexityBreakdown";
 import { CalculateAnotherCTA } from "@/components/calculator/results/CalculateAnotherCTA";
-import { StickyMobileCTA } from "@/components/calculator/results/StickyMobileCTA";
-import dynamic from "next/dynamic";
 
 const DemographicInsights = dynamic(() => import("@/components/calculator/results/DemographicInsights").then(mod => mod.DemographicInsights));
 const TestimonialCarousel = dynamic(() => import("@/components/calculator/results/TestimonialCarousel").then(mod => mod.TestimonialCarousel));
 const UpgradePitch = dynamic(() => import("@/components/calculator/results/UpgradePitch").then(mod => mod.UpgradePitch));
 import { ResultsPageFooter } from "@/components/calculator/results/ResultsPageFooter";
-import { useAnalytics } from "@/hooks/use-analytics";
 import { CalculationResult } from "@/app/api/results/[id]/route";
 import Script from "next/script";
 
@@ -136,7 +133,6 @@ export default async function ResultsPage({ params }: { params: { id: string } }
                             localAverage={data.market.localAverage}
                             location={data.userInput.location}
                         />
-                        <DemographicInsights location={data.userInput.location} />
                     </div>
                     <div className="space-y-6">
                         <ComplexityBreakdown
@@ -144,8 +140,13 @@ export default async function ResultsPage({ params }: { params: { id: string } }
                             complexity={data.userInput.complexity}
                             hourlyRate={data.pricing.sweetSpot / (data.userInput.orderQuantity * (10 / 60))} // Total Price / Total Hours (10 mins per cookie)
                         />
-                        <TestimonialCarousel />
+                        <DemographicInsights location={data.userInput.location} />
                     </div>
+                </div>
+
+                {/* Testimonial Banner */}
+                <div className="mb-16">
+                    <TestimonialCarousel />
                 </div>
 
                 {/* Upgrade Pitch */}

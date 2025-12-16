@@ -1,5 +1,4 @@
 import { HeroSection } from "@/components/calculator/landing/HeroSection";
-import { ScrollIndicator } from "@/components/calculator/landing/ScrollIndicator";
 
 export default function LandingPage() {
   return (

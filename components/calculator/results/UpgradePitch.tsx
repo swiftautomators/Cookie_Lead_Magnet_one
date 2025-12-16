@@ -26,7 +26,7 @@ export function UpgradePitch() {
                     </div>
 
                     <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">
-                        To scale to $10k/month, you don't need to bake faster. <br className="hidden md:block" />
+                        To scale to $10k/month, you don&apos;t need to bake faster. <br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
                             You need to stop guessing.
                         </span>
