@@ -142,7 +142,7 @@ export default async function ResultsPage({ params }: { params: { id: string } }
                         <ComplexityBreakdown
                             skillLevel={data.userInput.skillLevel}
                             complexity={data.userInput.complexity}
-                            hourlyRate={data.pricing.sweetSpot * data.userInput.orderQuantity / (data.userInput.orderQuantity * (10 / 60))} // Approx 10 mins per cookie assumption
+                            hourlyRate={data.pricing.sweetSpot / (data.userInput.orderQuantity * (10 / 60))} // Total Price / Total Hours (10 mins per cookie)
                         />
                         <TestimonialCarousel />
                     </div>

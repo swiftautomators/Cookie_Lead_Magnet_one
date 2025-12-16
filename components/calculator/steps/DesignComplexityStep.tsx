@@ -19,7 +19,7 @@ const complexityOptions = [
         colors: "1-2 colors",
         desc: "No intricacy",
         timeEstimate: "~5-8 mins/cookie",
-        image: "https://picsum.photos/id/102/400/300", // Placeholder
+        image: "/images/complexity/simple.jpg",
     },
     {
         value: "average",
@@ -27,7 +27,7 @@ const complexityOptions = [
         colors: "2-3 colors",
         desc: "Moderate intricacy",
         timeEstimate: "~10-15 mins/cookie",
-        image: "https://picsum.photos/id/106/400/300", // Placeholder
+        image: "/images/complexity/average.jpg",
     },
     {
         value: "detailed",
@@ -35,7 +35,7 @@ const complexityOptions = [
         colors: "4+ colors",
         desc: "Intricate precision",
         timeEstimate: "~20+ mins/cookie",
-        image: "https://picsum.photos/id/104/400/300", // Placeholder
+        image: "/images/complexity/detailed.jpg",
     },
 ] as const;
 

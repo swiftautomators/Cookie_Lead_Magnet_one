@@ -34,8 +34,8 @@ export function CalculateAnotherCTA() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button
                     onClick={() => router.push('/analyze')}
-                    variant="outline"
-                    className="bg-background"
+                    variant="secondary"
+                    className="bg-white text-slate-900 hover:bg-slate-100 font-semibold shadow-sm border border-slate-200"
                 >
                     <RefreshCw className="mr-2 w-4 h-4" />
                     Calculate New Order
