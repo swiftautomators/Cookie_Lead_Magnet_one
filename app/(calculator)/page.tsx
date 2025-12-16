@@ -1,5 +1,12 @@
 import { HeroSection } from "@/components/calculator/landing/HeroSection";
 
+/**
+ * Render the landing page layout with the hero section and a centered bottom scroll indicator.
+ *
+ * Renders a full-height container that displays the HeroSection and overlays a ScrollIndicator near the bottom center.
+ *
+ * @returns A React element representing the landing page.
+ */
 export default function LandingPage() {
   return (
     <div className="min-h-screen relative flex flex-col">
