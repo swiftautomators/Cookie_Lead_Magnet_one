@@ -61,11 +61,7 @@ async function getResults(id: string): Promise<CalculationResult | null> {
     }
 }
 
-// Client component wrapper for hooks
-function AnalyticsWrapper() {
-    useAnalytics();
-    return null;
-}
+import { AnalyticsWrapper } from "@/components/analytics/AnalyticsWrapper";
 
 export default async function ResultsPage({ params }: { params: { id: string } }) {
     // Awaiting params for Next.js 15+ compatibility if needed, though 14 works synchronously often
