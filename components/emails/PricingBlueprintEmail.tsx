@@ -63,7 +63,7 @@ export default function PricingBlueprintEmail({
                     <Section style={header}>
                         <Section style={logoContainer}>
                             <Img
-                                src="https://cookiecraftai.com/images/cookie-craft-logo-email.png" // Assumes deployed path, user might need to host this. For now using absolute path related to domain if possible or vercel deployment.
+                                src={`${process.env.NEXT_PUBLIC_APP_URL || 'https://cookiecraftai.com'}/images/cookie-craft-logo-email.png`}
                                 width="180"
                                 height="auto"
                                 alt="CookieCraft AI"
