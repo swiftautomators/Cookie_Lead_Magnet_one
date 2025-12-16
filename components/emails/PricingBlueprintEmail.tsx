@@ -38,7 +38,7 @@ export default function PricingBlueprintEmail({
     userName = "Andre",
     location = "Dallas, TX",
     skillLevel = "Seasoned",
-    complexity = "Avreage",
+    complexity = "Average",
     orderQuantity = 48,
     pricing = {
         perCookieLow: 6.00,

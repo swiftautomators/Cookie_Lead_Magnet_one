@@ -136,8 +136,6 @@ export default async function ResultsPage({ params }: { params: { id: string } }
                     </div>
                     <div className="space-y-6">
                         <ComplexityBreakdown
-                            skillLevel={data.userInput.skillLevel}
-                            complexity={data.userInput.complexity}
                             hourlyRate={data.pricing.sweetSpot / (data.userInput.orderQuantity * (10 / 60))} // Total Price / Total Hours (10 mins per cookie)
                         />
                         <DemographicInsights location={data.userInput.location} />

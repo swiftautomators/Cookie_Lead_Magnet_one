@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 
 // Mock database for now - in production this would query Supabase
 // We're duplicating the calculation logic here or fetching from DB
-// We're duplicating the calculation logic here or fetching from DB
 
 // Types for the response
 export interface CalculationResult {

@@ -1,11 +1,9 @@
 "use client";
 
 import { Palette } from "lucide-react";
-import { cn } from "@/lib/utils";
+
 
 interface ComplexityBreakdownProps {
-    skillLevel: string;
-    complexity: string;
     hourlyRate: number;
 }
 
