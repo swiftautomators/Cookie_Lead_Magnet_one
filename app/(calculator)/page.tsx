@@ -1,5 +1,4 @@
 import { HeroSection } from "@/components/calculator/landing/HeroSection";
-import { ScrollIndicator } from "@/components/calculator/landing/ScrollIndicator";
 
 /**
  * Render the landing page layout with the hero section and a centered bottom scroll indicator.

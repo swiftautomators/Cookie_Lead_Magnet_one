@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Palette, FlaskConical, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 /**
  * Render the UpgradePitch marketing hero section with animated headline, three benefit cards, call-to-action controls, and trust badges.
@@ -10,6 +11,8 @@ import { Button } from "@/components/ui/button";
  * @returns The hero section as a JSX element.
  */
 export function UpgradePitch() {
+    const router = useRouter();
+
     return (
         <div className="relative overflow-hidden rounded-3xl bg-slate-900 text-white shadow-2xl">
             {/* Background Gradients */}
@@ -31,7 +34,7 @@ export function UpgradePitch() {
                     </div>
 
                     <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">
-                        To scale to $10k/month, you don't need to bake faster. <br className="hidden md:block" />
+                        To scale to $10k/month, you don&apos;t need to bake faster. <br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
                             You need to stop guessing.
                         </span>
@@ -86,7 +89,7 @@ export function UpgradePitch() {
                         variant="outline"
                         size="lg"
                         className="h-14 px-8 text-lg border-white/20 text-white hover:bg-white/10 hover:text-white"
-                        onClick={() => window.location.href = '/analyze'}
+                        onClick={() => router.push('/analyze')}
                     >
                         📊 Calculate Another Order
                     </Button>

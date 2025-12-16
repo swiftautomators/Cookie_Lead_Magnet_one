@@ -41,7 +41,7 @@ export function SkillLevelStep() {
         <div className="space-y-8">
             <div className="text-center">
                 <h2 className="text-2xl font-serif font-bold text-secondary mb-2">
-                    👨‍🍳 What's Your Cookie Superpower?
+                    👨‍🍳 What&apos;s Your Cookie Superpower?
                 </h2>
                 <p className="text-amber-800/60">
                     Be honest! This affects labor time calculations.
