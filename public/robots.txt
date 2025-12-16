@@ -1,0 +1,22 @@
+# CookieCraft AI Pricing Calculator - Robots.txt
+# Allow all crawlers to index everything
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://cookie-lead-magnet-one.vercel.app/sitemap.xml
+
+# Crawl-delay for specific bots (optional, helps prevent server overload)
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot
+Crawl-delay: 0
+
+# Block common bad bots (optional)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
