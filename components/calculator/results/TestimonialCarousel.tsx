@@ -47,7 +47,7 @@ export function TestimonialCarousel() {
     }, []);
 
     return (
-        <div className="bg-neutral-900 text-white rounded-2xl p-6 relative overflow-hidden shadow-lg">
+        <div className="bg-neutral-900 text-white rounded-2xl p-6 relative overflow-hidden shadow-lg z-20">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-3xl -mr-10 -mt-10" />
 

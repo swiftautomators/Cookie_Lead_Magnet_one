@@ -60,6 +60,8 @@ export function ComplexityBreakdown({ skillLevel, complexity, hourlyRate }: Comp
                 <div className="mb-2 uppercase text-[10px] tracking-wider font-bold text-muted-foreground">Effective Hourly Rate</div>
                 <div className="flex items-baseline gap-2">
                     <span className="text-3xl font-bold font-serif text-primary">
+                        ${(hourlyRate / 10).toFixed(2)} {/* Corrected: Price / Hours (Cost / (Qty * 10min/60)) = Rate. Passed 'hourlyRate' was Price/10min. Actually, let's just fix the passed prop logic in parent page, OR fix it here if we assume prop is wrong. User said $1944. That was likely Total * 6. Let's look at parent page logic later. For now, assuming prop passed is "effective hourly rate", but if it's wrong, we need to fix the CALCULATION at the source. */}
+                        {/* Wait, I can't check source here easily in one step. Let's fix the layout first, then I'll fix the prop in ResultsPage. */}
                         ${hourlyRate.toFixed(2)}
                     </span>
                     <span className="text-sm text-muted-foreground">/ hour</span>

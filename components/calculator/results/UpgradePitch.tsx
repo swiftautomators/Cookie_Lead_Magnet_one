@@ -67,13 +67,15 @@ export function UpgradePitch() {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
-                    <Button
-                        size="lg"
-                        className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white border-0 h-14 px-8 text-lg shadow-[0_0_20px_rgba(236,72,153,0.3)] hover:shadow-[0_0_30px_rgba(236,72,153,0.5)] transition-all duration-300 group"
+                    <a
+                        href="https://cookiecraftai.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex h-14 items-center justify-center rounded-md bg-gradient-to-r from-amber-500 to-amber-600 px-8 text-lg font-medium text-white shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all duration-300 hover:from-amber-400 hover:to-amber-500 hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] group"
                     >
                         ✨ See How Pros Automate
                         <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                    </a>
 
                     <Button
                         variant="outline"
