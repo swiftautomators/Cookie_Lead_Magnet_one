@@ -50,7 +50,7 @@ export function HeroSection() {
                     >
                         <AnimatedCTA />
                         <p className="mt-4 text-sm text-muted-foreground">
-                            No credit card required · Free for early access
+                            Find Out What Your Time is Actually Worth
                         </p>
                     </motion.div>
                 </div>
