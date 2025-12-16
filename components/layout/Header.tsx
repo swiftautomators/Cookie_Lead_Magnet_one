@@ -22,7 +22,7 @@ export function Header() {
 
                 <nav>
                     <a
-                        href="https://cookiecraft.ai"
+                        href="https://cookiecraftai.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"

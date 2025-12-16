@@ -41,7 +41,11 @@ export function calculatePrice(data: z.infer<typeof calculatorSchema>) {
 };
 
 // Initialize Resend with API Key (safely handle missing key for dev)
-const resend = new Resend(process.env.RESEND_API_KEY || "re_123");
+const apiKey = process.env.RESEND_API_KEY;
+if (!apiKey) {
+    console.warn("⚠️ RESEND_API_KEY is missing. Emails will not be sent.");
+}
+const resend = new Resend(apiKey || "re_123");
 
 export async function POST(req: NextRequest) {
     try {
